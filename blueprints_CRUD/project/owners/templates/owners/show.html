@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Welcome to the show page!</h1>
+    <a href="{{ url_for('owners.edit', id=owner.id) }}">edit</a>
+    <p>Delete me?</p>
+
+    <form method="POST" action="{{url_for('owners.show', id=owner.id)}}?_method=DELETE">
+        <input type="submit" value="X">
+    </form>
+{% endblock %}
