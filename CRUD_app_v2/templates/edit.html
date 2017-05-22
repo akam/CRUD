@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %} 
+{% block contents %}
+	<form action="{{url_for('show', id=user.id)}}?_method=PATCH" method="POST">
+		<label for="">Username:</label>
+	    <input type="text" name="username" value="{{user.username}}">
+	    <label for="">Email:</label>
+	    <input type="text" name="email" value="{{user.email}}">
+	    <label for="">First name:</label>
+	    <input type="text" name="first_name" value="{{user.first_name}}">
+	    <label for="">Last name:</label>
+	    <input type="text" name="last_name" value="{{user.last_name}}">
+	    <input type="submit" value="edit user">
+	</form>
+
+	<form action="{{url_for('show', id=user.id)}}?_method=DELETE" method="POST">
+	    <input type="submit" value="DELETE USER">
+	</form>
+{% endblock %}

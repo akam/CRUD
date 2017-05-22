@@ -1,0 +1,18 @@
+.header{
+	background-color: lightblue;
+	padding: 10px;
+	color: grey;
+	margin: 10px;
+}
+
+.imagebox{
+	display: inline;
+	width: 30px;
+	height: 30px;
+}
+
+.title{
+	display: inline;
+	margin-top: 10px;
+	font-size: 30px;
+}

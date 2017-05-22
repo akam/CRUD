@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+{% block title %}
+	User {{user.username}}
+{% endblock %}
+
+
+{% block contents %}
+	<p>{{user.username}} {{user.email}} {{user.first_name}} {{user.last_name}}</p>
+
+	<form action="{{url_for('edit', id = user.id)}}">
+		<input type="submit" value="edit user">
+	</form>
+
+{% endblock %}
